@@ -1,0 +1,148 @@
+" vim起動時のみruntimepathにneobundle.vimを追加
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+ endif
+
+" neobundle.vimの初期化
+ call neobundle#begin(expand('~/.vim/bundle/'))
+" NeoBundleを更新するための設定
+ NeoBundleFetch 'Shougo/neobundle.vim'
+
+" 読み込むプラグインを記載
+ NeoBundle 'Shougo/unite.vim'
+ NeoBundle 'itchyny/lightline.vim'
+ NeoBundle 'Shougo/neosnippet'
+ NeoBundle 'Shougo/neocomplete.vim'
+ NeoBundle 'scrooloose/nerdtree'
+ NeoBundle 'Shougo/neomru.vim'
+ NeoBundle 'ornicar/vim-mru'
+ NeoBundle 'Shougo/neosnippet-snippets'
+ NeoBundle 'thinca/vim-quickrun'
+ NeoBundle 'Shougo/vimfiler'
+ NeoBundle 'violetyk/cake.vim'
+ NeoBundle 'tyru/caw.vim.git'
+ NeoBundle 'violetyk/vim-phpclass'
+ NeoBundle 'kana/vim-gf-user'
+ NeoBundle 'seventhsense/nerdtree', 'development'
+ NeoBundle 'vim-scripts/taglist.vim'
+ NeoBundle 'szw/vim-tags'
+
+" カラースキーム
+ NeoBundle 'altercation/vim-colors-solarized'
+ NeoBundle 'croaker/mustang-vim'
+ NeoBundle 'jeffreyiacono/vim-colors-wombat'
+ NeoBundle 'nanotech/jellybeans.vim'
+ NeoBundle 'vim-scripts/Lucius'
+ NeoBundle 'vim-scripts/Zenburn'
+ NeoBundle 'mrkn/mrkn256.vim'
+ NeoBundle 'jpo/vim-railscasts-theme'
+ NeoBundle 'therubymug/vim-pyte'
+ NeoBundle 'tomasr/molokai'
+ NeoBundle 'ujihisa/unite-colorscheme'
+
+" インストールのチェック
+ NeoBundleCheck
+ NeoBundle 'Shougo/neocomplcache'
+
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_manual_completion_start_length = 0
+let g:neocomplcache_caching_percent_in_statusline = 1
+let g:neocomplcache_enable_skip_completion = 1
+let g:neocomplcache_skip_input_time = '0.5'
+ call neobundle#end()
+
+" Nerdtree設定
+" NERDTreeファイルコピーのメニューを表示させる
+let g:NERDTreeCopyCmd= 'cp -r '
+let NERDTreeWinSize=55
+" 隠しファイルをデフォルトで表示させる
+" let NERDTreeShowHidden = 1
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" 読み込んだプラグインも含め、ファイルタイプの検出、
+" ファイルタイプ別プラグイン/インデントを有効化する
+filetype plugin indent on
+
+"各種セットアップ
+:set noswapfile
+:set nobackup
+:set noundofile
+:set clipboard=unnamed,autoselect
+:set number
+:set nowrap
+:set guioptions+=b
+:set noautoindent
+:set nosmartindent
+
+" ショートカットキー
+nmap <C-j> <Plug>(caw:i:toggle)
+vmap <C-j> <Plug>(caw:i:toggle)
+
+nnoremap <silent><C-y> :vsplit<CR>
+nnoremap <silent><C-m> :MRU<CR>
+
+nnoremap <silent><C-t> :tabe<CR>
+nmap <Space>    gt
+
+"neosnippet定義
+let g:neosnippet#enable_snipmate_compatibility = 1
+let s:my_snippet = '~/.vim/snippets/'
+let g:neosnippet#snippets_directory = s:my_snippet
+autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
+
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+
+"タグの設定。
+:set tags+=~/.ctags
+
+"タブ、空白、改行の可視化
+syntax on
+set list
+set listchars=tab:>.,trail:_,eol:?,extends:>,precedes:<,nbsp:%
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
+
+augroup PHP
+	autocmd!
+	" 文末の半角スペースを削除
+	autocmd BufWritePre *.php\|*.ctp\|*.tpl %s/\s\+$//e
+	" PHPLint処理
+	autocmd BufWritePost *.php\|*.ctp\|*.tpl call PHPLint()
+augroup END
+" PHPLint処理
+function PHPLint()
+	" php -lの実行結果を変数に代入
+	let Lint_Result = system( &ft . ' -l ' . bufname(""))
+	" No syntax errorsの文字列がmatchするかチェック
+	let Match_Result = matchstr(Lint_Result, 'No syntax errors')
+	" エラーがあるときだけLintの結果を出力する
+	if len(Match_Result) == 0 | echo Lint_Result | endif
+endfunction
+
+" CakePHP設定
+" let g:cakephp_enable_fix_mode = 1
+" let g:cakephp_enable_auto_mode = 1
+" let g:cakephp_app = "/var/www/html/xworld/app_front/"
+" let g:cakephp_app = "/var/www/html/avabel/app_admin/"
+
+" ファイルエンコード定義
+:colorscheme railscasts
+:set encoding=utf-8
+:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+:set fileformats=unix,dos,mac
+:set fenc=utf-8

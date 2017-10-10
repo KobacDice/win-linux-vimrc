@@ -1,0 +1,1225 @@
+# この viminfo ファイルは Vim 7.4 によって生成されました.
+# 変更する際には十分注意してください!
+
+# このファイルが書かれた時の 'encoding' の値
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最後の 検索パターン:
+~MSle0~/else
+
+# 最後の Substitute 検索パターン:
+~MSle0&^" \a
+
+# 最後に置換された文字列:
+$= ''
+
+# コマンドライン 項目の履歴 (新しいものから古いものへ):
+:Cmodel Adminuser
+:Cview 
+:q
+:45
+:Ccontroller 
+:Ccomponent 
+:Cmodel 
+:Cmodel ReplyMailTemplate
+:Cview
+:Ccontroller ReplyMailTemplate
+:Ccontroller App
+:Cview Faq 
+:Cview Faq
+:Cview Information
+:Ccontroller BaseReplyMailTemplate
+:Cmodel
+:Cakephp app_admin
+:copen
+:.cc
+:vimgrep Cookie ..\avabel\**\*.php
+:w
+:set tags=C:\\Users\USER\vim\ctags58j2bin\tags
+:tags
+:set tags=..\vim\ctags58j2bin\tags
+:Tlist
+:NeoBundleCheck
+:vsplit
+:Ccomponent BaseInformation
+:Ccontroller BaseInformation
+:Cmodel BaseInformation
+:call NetUserPass("qjaqium","mizo0010")
+:NetrwSettings
+:q!
+:.,.+1!:q!
+:help script
+:e ftp
+::q!
+:Cakeinfo
+:Cakephp ..\..\Admin\
+:wq!
+:Net
+:h netrw
+:Cakephp スタート\ メニュー\
+:Cakephp
+:bd
+:!
+:Explore
+:Explorer
+:Exploer
+:'<,'>q
+
+# 検索文字列 項目の履歴 (新しいものから古いものへ):
+?/cookie
+?/else
+? ^" \a
+?/user
+?/uid
+?/pass
+? = $
+?/u
+? ^\.\.\=/$
+? \<PAGE_LIMIT\>
+? @$
+?/DB
+?/言語
+? 言語
+? "言語"
+? \<php\>
+?/swf
+?/ZenkakuSpace
+?/neocomplcache
+?/range
+?/neosnippet
+?/sendData
+?/is_connec
+?///
+?/send
+?/senddata
+?/is_connect_start
+?/\/\/
+?/client_id
+?/client_Id
+?/sendDat
+?/Received
+?/onConnect
+?/read
+?/readFromSocket
+?/_sendDebugMessage
+?/Receivedn
+?/Re
+?/user_data
+?/user_name
+?/is_connect
+?/is_conne
+?/onclose
+?/foreach
+?/close
+?/DB_FETCHMODE_ASSO
+? \<case\>
+? \/\*\*\*
+?//
+?/$db
+
+# 式 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+@:q
+@[{y(es)},n(o),a(ll),q(uit)] y
+@[{y(es)},n(o),a(ll),q(uit)] yes
+@[{y(es)},n(o),a(ll),q(uit)] 
+@[{y(es)},n(o),a(ll),q(uit)] a
+@[{y(es)},n(o),a(ll),q(uit)] q
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# レジスタ:
+""0	CHAR	0
+			'session.cookie_secure' => 0,
+			'session.cookie_lifetime' => 604800,
+"1	LINE	0
+	
+"2	LINE	0
+	
+"3	LINE	0
+	
+"4	LINE	0
+	<?php//if (!isset($params["contact_reply_template_id"])): ?>
+"5	LINE	0
+	
+"6	LINE	0
+	
+"7	LINE	0
+			var_dump($infoList);
+"8	LINE	0
+	
+"9	LINE	0
+	
+"i	CHAR	0
+	krkb
+"-	CHAR	0
+	7
+
+# ファイルマーク:
+'M  1  0  C:\0_Work\1_Dev\myServer.php
+'0  19  63  ~\Downloads\志望動機245\4_アソビモ_退社時\1_職務経歴書\職務経歴書-0.txt
+'1  1  0  ~\avabel\app_admin\Model\Adminuser.php
+'2  1  0  ~\avabel\app_admin\Model\ReplyMailTemplate.php
+'3  85  0  ~\avabel\app_admin\Controller\ReplyMailTemplateController.php
+'4  4  0  ~\avabel\NERD_tree_1
+'5  1  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseReplyMailTemplateController.php
+'6  182  55  ~\avabel\app_admin\Config\core.php
+'7  259  0  ~\avabel\app_admin\View\Contact\show.ctp
+'8  43  33  ~\avabel\app_admin\View\Contact\show.ctp
+'9  265  11  ~\avabel\NERD_tree_1
+
+# ジャンプリスト (新しいものが先):
+-'  19  63  ~\Downloads\志望動機245\4_アソビモ_退社時\1_職務経歴書\職務経歴書-0.txt
+-'  1  0  ~\Downloads\志望動機245\4_アソビモ_退社時\1_職務経歴書\職務経歴書-0.txt
+-'  1  0  ~\avabel\app_admin\Model\Adminuser.php
+-'  1  0  ~\avabel\app_admin\Model\ReplyMailTemplate.php
+-'  85  0  ~\avabel\app_admin\Controller\ReplyMailTemplateController.php
+-'  10  37  ~\avabel\app_admin\Controller\AppController.php
+-'  4  0  ~\avabel\NERD_tree_1
+-'  15  0  ~\avabel\NERD_tree_1
+-'  1  0  ~\avabel\NERD_tree_1
+-'  1  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseReplyMailTemplateController.php
+-'  182  55  ~\avabel\app_admin\Config\core.php
+-'  145  0  ~\avabel\app_front\Config\bootstrap.php
+-'  181  12  ~\avabel\app_admin\Config\core.php
+-'  147  14  ~\avabel\app_batch\Config\core.php
+-'  149  14  ~\avabel\app_batch\Config\core.php
+-'  146  11  ~\avabel\app_front\Config\bootstrap.php
+-'  28  4  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  45  13  ~\avabel\asobimo_platform\lib\Cake\Test\Case\TestSuite\ControllerTestCaseTest.php
+-'  1818  18  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1817  25  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1824  20  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  186  2  ~\avabel\app_admin\Config\core.php
+-'  10  0  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  1  0  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  26  21  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  531  36  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  22  1  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  1  0  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  1446  0  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  195  0  ~\avabel\app_admin\Config\core.php
+-'  259  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  268  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  1  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  69  0  ~\avabel\app_admin\View\ReplyMailTemplate\confirm.ctp
+-'  271  17  ~\avabel\app_admin\View\Contact\show.ctp
+-'  43  33  ~\avabel\app_admin\View\Contact\show.ctp
+-'  265  11  ~\avabel\NERD_tree_1
+-'  275  0  ~\avabel\NERD_tree_1
+-'  5  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  5  21  ~\avabel\app_batch\Config\core.php
+-'  1  0  ~\avabel\app_batch\Config\core.php
+-'  391  8  ~\avabel\NERD_tree_1
+-'  493  0  ~\avabel\NERD_tree_1
+-'  8  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  10  59  ~\avabel\app_batch\Config\core.php
+-'  8  42  ~\avabel\app_batch\Config\core.php
+-'  739  10  ~\avabel\NERD_tree_1
+-'  828  0  ~\avabel\NERD_tree_1
+-'  10  35  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  3  42  ~\avabel\app_batch\Config\core.php
+-'  1241  11  ~\avabel\NERD_tree_1
+-'  1341  0  ~\avabel\NERD_tree_1
+-'  1  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\__MRU_Files__
+-'  100  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\__MRU_Files__
+-'  28  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  54  30  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  129  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  71  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  239  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  24  54  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  203  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\NERD_tree_1
+-'  238  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\NERD_tree_1
+-'  1  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\NERD_tree_1
+-'  52  0  ~\vim\vim74\syntax\colortest.vim
+-'  1  0  ~\vim\vim74\syntax\colortest.vim
+-'  18  36  ~\vim\vim74\syntax\colortest.vim
+-'  74  14  ~\vim\vim74\syntax\colortest.vim
+-'  212  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  96  7  ~\avabel\asobimo_platform\plugins\Admin\Controller\__Tag_List__
+-'  85  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\__Tag_List__
+-'  84  0  ~\avabel\asobimo_platform\plugins\Admin\Controller\__Tag_List__
+-'  78  35  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  159  8  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  182  55  ~\avabel\app_admin\Config\core.php
+-'  145  0  ~\avabel\app_front\Config\bootstrap.php
+-'  181  12  ~\avabel\app_admin\Config\core.php
+-'  147  14  ~\avabel\app_batch\Config\core.php
+-'  149  14  ~\avabel\app_batch\Config\core.php
+-'  146  11  ~\avabel\app_front\Config\bootstrap.php
+-'  28  4  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  45  13  ~\avabel\asobimo_platform\lib\Cake\Test\Case\TestSuite\ControllerTestCaseTest.php
+-'  1818  18  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1817  25  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1  0  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  1824  20  ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+-'  186  2  ~\avabel\app_admin\Config\core.php
+-'  10  0  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  1  0  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  26  21  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  531  36  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  22  1  ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+-'  1  0  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  1446  0  ~\avabel\app_front\Vendor\facebook\base_facebook.php
+-'  195  0  ~\avabel\app_admin\Config\core.php
+-'  259  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  268  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  1  0  ~\avabel\app_admin\View\Contact\show.ctp
+-'  69  0  ~\avabel\app_admin\View\ReplyMailTemplate\confirm.ctp
+-'  85  0  ~\avabel\app_admin\Controller\ReplyMailTemplateController.php
+
+# ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~\Downloads\志望動機245\4_アソビモ_退社時\1_職務経歴書\職務経歴書-0.txt
+	"	19	63
+
+> ~\avabel\app_admin\Model\Adminuser.php
+	"	1	0
+
+> ~\avabel\app_admin\Model\ReplyMailTemplate.php
+	"	1	0
+
+> ~\avabel\app_admin\Controller\AppController.php
+	"	10	37
+
+> ~\avabel\app_admin\Controller\ReplyMailTemplateController.php
+	"	85	0
+
+> ~\avabel\NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseReplyMailTemplateController.php
+	"	1	0
+
+> ~\avabel\app_admin\View\Contact\show.ctp
+	"	259	0
+	^	265	0
+	.	312	0
+	+	253	43
+	+	251	0
+	+	264	0
+	+	265	0
+	+	263	0
+	+	312	0
+
+> ~\avabel\__MRU_Files__
+	"	1	0
+	.	1	0
+	+	301	0
+	+	201	0
+	+	101	0
+	+	1	0
+
+> ~\avabel\app_admin\Config\core.php
+	"	182	55
+	^	180	2
+	.	180	1
+	+	179	0
+	+	180	1
+
+> ~\avabel\app_batch\Config\core.php
+	"	147	14
+
+> ~\avabel\app_front\Config\bootstrap.php
+	"	145	0
+
+> ~\avabel\app_front\Config\core.php
+	"	1	0
+
+> ~\avabel\app_front\Controller\Component\FacebookCampaignComponent.php
+	"	28	4
+
+> ~\avabel\app_front\Vendor\facebook\base_facebook.php
+	"	531	36
+
+> ~\avabel\app_front\Vendor\facebook\facebook.php
+	"	1	0
+
+> ~\avabel\app_front\Vendor\google-api\src\Google\Service\AdExchangeBuyer.php
+	"	1	0
+
+> ~\avabel\app_front\Vendor\google-api\src\Google\Service\Books.php
+	"	1	0
+
+> ~\avabel\app_front\Vendor\google-api\src\Google\Service\Dfareporting.php
+	"	1	0
+
+> ~\avabel\app_sales\Config\core.php
+	"	1	0
+
+> ~\avabel\app_summary\Config\core.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Console\Templates\skel\Config\core.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Controller\Component\Auth\BasicAuthenticate.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Controller\Component\Auth\DigestAuthenticate.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Controller\Component\AuthComponent.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Controller\Component\CookieComponent.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Controller\Controller.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Model\Datasource\CakeSession.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Network\CakeResponse.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Network\Http\HttpResponse.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Network\Http\HttpSocket.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Controller\Component\CookieComponentTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Controller\Component\SessionComponentTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Controller\ComponentCollectionTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Controller\ControllerTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Model\Datasource\CakeSessionTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Network\CakeResponseTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Network\Http\HttpResponseTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Network\Http\HttpSocketTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\TestSuite\ControllerTestCaseTest.php
+	"	45	13
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\Utility\SetTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\lib\Cake\Test\Case\View\HelperTest.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\plugins\Front\Controller\Component\BaseResultNoticeComponent.php
+	"	1818	18
+
+> ~\Desktop\Cookie�T���v��2.php
+	"	1	0
+
+> ~\Desktop\Cookie�T���v��.php
+	"	1	0
+
+> ~\Desktop\__MRU_Files__
+	"	2	0
+	.	1	0
+	+	301	0
+	+	201	0
+	+	101	0
+	+	1	0
+
+> ~\avabel\app_admin\View\ReplyMailTemplate\confirm.ctp
+	"	69	0
+	.	69	0
+	+	69	0
+
+> ~\avabel\app_admin\Model\Course.php
+	"	1	0
+
+> ~\avabel\app_admin\Model\FaqCategory.php
+	"	5	34
+
+> ~\avabel\asobimo_platform\plugins\Admin\Model\BaseFaqCategory.php
+	"	5	0
+
+> ~\avabel\app_admin\Model\Faq.php
+	"	5	21
+
+> ~\avabel\asobimo_platform\plugins\Admin\Model\BaseFaq.php
+	"	5	0
+
+> ~\avabel\app_admin\Controller\AppPageLoginController.php
+	"	10	59
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseAppPageLoginController.php
+	"	8	0
+
+> ~\avabel\app_admin\Controller\CampaignGachaController.php
+	"	8	42
+
+> ~\avabel\app_admin\Model\Contact.php
+	"	5	31
+
+> ~\avabel\asobimo_platform\plugins\Admin\Model\BaseContact.php
+	"	5	26
+
+> ~\avabel\app_admin\Model\AppModel.php
+	"	33	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseAppController.php
+	"	10	35
+
+> ~\avabel\app_admin\Controller\FaqController.php
+	"	3	42
+
+> ~\avabel\asobimo_platform\plugins\Admin\Model\BaseCampaignEventCategory.php
+	"	5	43
+
+> ~\avabel\__Tag_List__
+	"	5	4
+	.	33	0
+	+	33	0
+
+> ~\avabel\app_admin\Controller\CampaignEventCategoryController.php
+	"	8	60
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\__MRU_Files__
+	"	1	0
+	.	1	0
+	+	2801	0
+	+	2701	0
+	+	2601	0
+	+	2501	0
+	+	2401	0
+	+	2301	0
+	+	2201	0
+	+	2101	0
+	+	2001	0
+	+	1901	0
+	+	1801	0
+	+	1701	0
+	+	1601	0
+	+	1501	0
+	+	1401	0
+	+	1301	0
+	+	1201	0
+	+	1101	0
+	+	1001	0
+	+	901	0
+	+	801	0
+	+	701	0
+	+	601	0
+	+	501	0
+	+	401	0
+	+	301	0
+	+	201	0
+	+	101	0
+	+	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseInformationController.php
+	"	129	0
+	.	74	0
+	+	41	0
+	+	40	0
+	+	40	0
+	+	40	0
+	+	48	0
+	+	278	0
+	+	74	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Model\BaseInformation.php
+	"	28	0
+	^	32	1
+	.	32	0
+	+	207	6
+	+	32	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\Component\BaseInformationComponent.php
+	"	32	29
+	^	69	0
+	.	69	0
+	+	321	0
+	+	248	0
+	+	208	0
+	+	179	0
+	+	180	0
+	+	179	0
+	+	155	0
+	+	96	0
+	+	53	0
+	+	21	41
+	+	298	0
+	+	114	0
+	+	69	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseFaqController.php
+	"	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseGachaCategoryController.php
+	"	28	12
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseGameProductController.php
+	"	169	3
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseGachaController.php
+	"	234	3
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseGachaPrizeController.php
+	"	238	3
+
+> ~\vim\vim74\syntax\colortest.vim
+	"	52	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\__Tag_List__
+	"	11	10
+	.	83	0
+	+	165	0
+	+	83	0
+
+> ~\avabel\app_admin\Controller\InformationController.php
+	"	5	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\option-window
+	"	1	0
+	.	918	0
+	+	918	0
+
+> ~\vim\plugins\vimdoc-ja\doc\usr_41.jax
+	"	81	5
+
+> ~\avabel\app_admin\Controller\NERD_tree_1
+	"	46	13
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~\NetrwTreeListing 1
+	"	19	10
+	.	9	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	280	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	23	0
+	+	9	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\.htaccess
+	"	15	10
+
+> ~\NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\.htaccess
+	"	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\ftp
+	"	1	0
+
+> ~\__MRU_Files__
+	"	1	0
+	.	1	0
+	+	4445	0
+	+	4434	0
+	+	4423	0
+	+	4412	0
+	+	4401	0
+	+	4390	0
+	+	4379	0
+	+	4368	0
+	+	4357	0
+	+	4346	0
+	+	4335	0
+	+	4322	0
+	+	4309	0
+	+	4296	0
+	+	4283	0
+	+	4270	0
+	+	4257	0
+	+	4244	0
+	+	4231	0
+	+	4218	0
+	+	4205	0
+	+	4192	0
+	+	4179	0
+	+	4166	0
+	+	4153	0
+	+	4140	0
+	+	4127	0
+	+	4110	0
+	+	4093	0
+	+	4076	0
+	+	4059	0
+	+	4042	0
+	+	4025	0
+	+	4008	0
+	+	3991	0
+	+	3974	0
+	+	3957	0
+	+	3933	0
+	+	3909	0
+	+	3876	0
+	+	3843	0
+	+	3810	0
+	+	3777	0
+	+	3740	0
+	+	3703	0
+	+	3667	0
+	+	3667	0
+	+	3625	0
+	+	3583	0
+	+	3541	0
+	+	3499	0
+	+	3457	0
+	+	3411	0
+	+	3365	0
+	+	3316	0
+	+	3263	0
+	+	3210	0
+	+	3157	0
+	+	3104	0
+	+	3051	0
+	+	2998	0
+	+	2945	0
+	+	2892	0
+	+	2839	0
+	+	2786	0
+	+	2734	0
+	+	2681	0
+	+	2628	0
+	+	2575	0
+	+	2522	0
+	+	2469	0
+	+	2416	0
+	+	2355	0
+	+	2294	0
+	+	2233	0
+	+	2172	0
+	+	2111	0
+	+	2038	0
+	+	1965	0
+	+	1892	0
+	+	1819	0
+	+	1738	0
+	+	1657	0
+	+	1576	0
+	+	1495	0
+	+	1398	0
+	+	1301	0
+	+	1201	0
+	+	1101	0
+	+	1001	0
+	+	901	0
+	+	801	0
+	+	701	0
+	+	601	0
+	+	501	0
+	+	401	0
+	+	301	0
+	+	201	0
+	+	101	0
+	+	1	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseInfoController.php
+	"	12	0
+
+> ~\avabel\asobimo_platform\plugins\Admin\Controller\BaseInquiryController.php
+	"	35	10
+
+> ftp:\\\qjaqium@gyroqjaqium.com\home\qjaqium\www
+	"	1	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\home\qjaqium\www
+	"	1	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\asobimo_platform\plugins\Admin\Controller\BaseInformationController.php
+	"	1	0
+	.	16	0
+	+	15	0
+	+	16	2
+	+	16	2
+	+	15	4
+	+	14	0
+	+	16	0
+
+> ~\vim\plugins\vimdoc-ja\doc\pi_netrw.jax
+	"	119	25
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\InformationController.php
+	"	1	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\InternalAuditController.php
+	"	1	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\FaqController.php
+	"	45	7
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\
+	"	10	0
+	.	11	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	41	0
+	+	34	0
+	+	31	0
+	+	32	0
+	+	31	0
+	+	32	0
+	+	32	0
+	+	31	0
+	+	34	0
+	+	31	0
+	+	32	0
+	+	31	0
+	+	34	0
+	+	34	0
+	+	32	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	11	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\
+	"	12	0
+	.	10	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	53	0
+	+	52	0
+	+	52	0
+	+	52	0
+	+	52	0
+	+	52	0
+	+	52	0
+	+	31	0
+	+	10	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\
+	"	44	0
+	.	95	0
+	+	323	0
+	+	327	0
+	+	331	0
+	+	1	0
+	+	1	0
+	+	239	0
+	+	243	0
+	+	247	0
+	+	153	0
+	+	157	0
+	+	161	0
+	+	165	0
+	+	169	0
+	+	173	0
+	+	177	0
+	+	181	0
+	+	185	0
+	+	189	0
+	+	95	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\CampaignEventCategoryController.php
+	"	78	0
+
+> ftp:\\qjaqium@gyroqjaqium.com\www\app_admin\Controller\GachaRevolvingLimitShareController.php
+	"	1	0
+
+> ~\_vimrc
+	"	141	0
+	^	136	0
+	.	136	0
+	+	38	0
+	+	42	0
+	+	43	0
+	+	41	0
+	+	41	0
+	+	43	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	40	20
+	+	39	0
+	+	38	29
+	+	47	0
+	+	47	0
+	+	47	0
+	+	40	25
+	+	47	0
+	+	46	0
+	+	47	0
+	+	55	0
+	+	55	0
+	+	71	0
+	+	72	0
+	+	71	16
+	+	55	0
+	+	55	0
+	+	53	10
+	+	52	15
+	+	59	0
+	+	82	9
+	+	82	0
+	+	84	0
+	+	87	0
+	+	88	0
+	+	91	0
+	+	90	0
+	+	82	0
+	+	84	0
+	+	83	0
+	+	84	0
+	+	85	0
+	+	83	14
+	+	56	1
+	+	64	0
+	+	82	0
+	+	56	0
+	+	101	0
+	+	107	0
+	+	130	0
+	+	130	0
+	+	103	0
+	+	102	0
+	+	105	0
+	+	102	11
+	+	105	43
+	+	106	0
+	+	106	0
+	+	104	0
+	+	107	30
+	+	108	0
+	+	106	0
+	+	92	0
+	+	91	0
+	+	89	0
+	+	101	0
+	+	106	0
+	+	116	0
+	+	123	0
+	+	130	0
+	+	101	0
+	+	66	0
+	+	62	0
+	+	74	0
+	+	14	0
+	+	17	0
+	+	33	0
+	+	36	0
+	+	38	0
+	+	33	0
+	+	11	0
+	+	82	0
+	+	74	0
+	+	126	0
+	+	105	0
+	+	106	0
+	+	106	0
+	+	105	37
+	+	105	0
+	+	29	29
+	+	30	33
+	+	31	0
+	+	15	0
+	+	33	52
+	+	11	0
+	+	58	0
+	+	60	0
+	+	134	0
+	+	135	0
+	+	136	0

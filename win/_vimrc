@@ -1,0 +1,168 @@
+"コマンドサンプル
+"mkdir %userprofile%\.vim\bundle
+"cd %userprofile%\.vim\bundle
+"git clone git://github.com/Shougo/neobundle.vim
+
+" vim起動時のみruntimepathにneobundle.vimを追加
+if has('vim_starting')
+   set nocompatible
+   set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+" neobundle.vimの初期化 
+call neobundle#begin(expand('~/.vim/bundle/'))
+" NeoBundleを更新するための設定
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" 読み込むプラグインを記載
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'ornicar/vim-mru'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle "tyru/caw.vim.git"
+NeoBundle 'violetyk/cake.vim'
+NeoBundle 'violetyk/vim-phpclass'
+NeoBundle 'kana/vim-gf-user'
+NeoBundle 'seventhsense/nerdtree', 'development'
+NeoBundle 'jpo/vim-railscasts-theme'
+
+" インストールのチェック
+NeoBundleCheck
+
+NeoBundle 'Shougo/neocomplcache'
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_manual_completion_start_length = 0
+let g:neocomplcache_caching_percent_in_statusline = 1
+let g:neocomplcache_enable_skip_completion = 1
+let g:neocomplcache_skip_input_time = '0.5'
+
+call neobundle#end()
+
+" 読み込んだプラグインも含め、ファイルタイプの検出、
+" ファイルタイプ別プラグイン/インデントを有効化する
+filetype plugin indent on
+
+" ショートカットキー
+nnoremap <silent><C-y> :vsplit<CR>
+"nnoremap <silent><C-j> :q!<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" タブ作成 ＆ 移動
+nnoremap <silent><C-t> :tabe<CR>
+nmap <Space>      gt
+" nmap <S-Tab>    gT
+
+nnoremap <silent><C-m> :MRU<CR>
+"nnoremap <silent><C-s> :wa<CR>
+"imap <C-s> <esc>
+nmap <C-j> <Plug>(caw:i:toggle)
+vmap <C-j> <Plug>(caw:i:toggle)
+imap <C-j> <Plug>(neosnippet_expand_or_jump)
+smap <C-j> <Plug>(neosnippet_expand_or_jump)
+
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+
+:set encoding=utf-8
+:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+:set fileformats=unix,dos,mac
+
+"ファイルコピーのメニューを表示させる
+let g:NERDTreeCopyCmd= 'cp -r '
+let NERDTreeWinSize=55
+
+"各種セットアップ
+:set noswapfile
+:set nobackup
+:set noundofile
+:set clipboard=unnamed,autoselect
+:set lines=70
+:set columns=250
+:set number
+:set nowrap
+:set guioptions+=b
+:set formatoptions=q
+" 隠しファイルをデフォルトで表示させる
+" let NERDTreeShowHidden = 1
+
+" タグの設定。
+":set tags+=C:\\Users\\d_kobayashi\\vim\\ec58j2w32bin\\tags
+:set tags+=C:\\Users\\USER\\vim\\ctags58j2bin\\tags
+
+"タブ、空白、改行の可視化
+syntax on
+set list
+set listchars=tab:>.,trail:_,eol:?,extends:>,precedes:<,nbsp:%
+"全角スペースをハイライト表示
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
+
+" PHP構文エラーチェック
+augroup PHP
+  autocmd!
+  autocmd FileType php set makeprg=php\ -l\ %
+  " php -lの構文チェックでエラーがなければ「No syntax errors」の一行だけ出力される
+  autocmd BufWritePost *.php\|*.ctp\|*.tpl silent make | if len(getqflist()) != 1 | copen | else | cclose | endif
+augroup END
+
+"PHPのコード補完
+" 自分用 snippet ファイルの場所
+let s:my_snippet = '~/snippet/'
+let g:neosnippet#snippets_directory = s:my_snippet
+" set: dictionary= で辞書ファイルを指定
+autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
+
+" CakePHP設定
+"let g:cakephp_enable_fix_mode = 1
+"let g:cakephp_enable_auto_mode = 1
+"let g:cakephp_app = "K:\\html\\avabel\\app_admin\\"
+"let g:cakephp_app = "C:\\Users\\USER\\avabel\\app_admin\\"
+"let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\avabel\\app_front\\"
+"let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\avabel\\asobimo_platform\\plugins\\Admin\\"
+"let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\avabel\\asobimo_platform\\plugins\\Front\\"
+"let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\tool\\app\\"
+" バッファで開くキーバインド設定
+nnoremap <Space>cc :Ccontroller
+nnoremap <Space>cm :Cmodel
+nnoremap <Space>cv :Cview
+nnoremap <Space>cvw :Ccontrollerview
+nnoremap <Space>cs :Cshell
+nnoremap <Space>ct :Ctask
+nnoremap <Space>ccf :Cconfig
+nnoremap <Space>ccp :Ccomponent
+nnoremap <Space>cl :Clog
+" splitで開くキーバインド設定
+nnoremap <Space>ccs :Ccontrollersp
+nnoremap <Space>cms :Cmodelsp
+nnoremap <Space>cvs :Cviewsp
+nnoremap <Space>cvws :Ccontrollerviewsp
+nnoremap <Space>ccfs :Cconfigsp
+nnoremap <Space>ccps :Ccomponentsp
+" vsplitで開くキーバインド設定
+nnoremap <Space>ccv :Ccontrollervsp
+nnoremap <Space>cmv :Cmodelvsp
+nnoremap <Space>cvv :Cviewvsp
+nnoremap <Space>cvwv :Ccontrollerviewvsp
+nnoremap <Space>ccfv :Cconfigvsp
+nnoremap <Space>ccpv :Ccomponentvsp
+" tabで開くキーバインド設定
+nnoremap <Space>cct :Ccontrollertab
