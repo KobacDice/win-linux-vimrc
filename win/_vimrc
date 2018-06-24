@@ -58,8 +58,8 @@ nnoremap <silent><C-y> :vsplit<CR>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " タブ作成 ＆ 移動
-nnoremap <silent><C-t> :tabe<CR>
-nmap <Space>      gt
+" nnoremap <silent><C-t> :tabe<CR>
+" nmap <Space>      gt
 " nmap <S-Tab>    gT
 
 nnoremap <silent><C-m> :MRU<CR>
@@ -97,7 +97,8 @@ let NERDTreeWinSize=55
 
 " タグの設定。
 ":set tags+=C:\\Users\\d_kobayashi\\vim\\ec58j2w32bin\\tags
-:set tags+=C:\\Users\\USER\\vim\\ctags58j2bin\\tags
+":set tags+=C:\\Users\\USER\\vim\\ctags58j2bin\\tags
+:set tags+=%userprofile%\\.ctags
 
 "タブ、空白、改行の可視化
 syntax on
