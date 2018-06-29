@@ -89,8 +89,8 @@ vmap <C-j> <Plug>(caw:i:toggle)
 nnoremap <silent><C-y> :vsplit<CR>
 nnoremap <silent><C-m> :MRU<CR>
 
-nnoremap <silent><C-t> :tabe<CR>
-nmap <Space>    gt
+"nnoremap <silent><C-t> :tabe<CR>
+"nmap <Space>    gt
 
 "neosnippet定義
 let g:neosnippet#enable_snipmate_compatibility = 1
