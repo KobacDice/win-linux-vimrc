@@ -73,7 +73,6 @@ filetype plugin indent on
 
 "各種セットアップ
 :set noswapfile
-:set nobackup
 :set noundofile
 :set clipboard=unnamed,autoselect
 :set number
@@ -149,5 +148,10 @@ endfunction
 :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 :set fileformats=unix,dos,mac
 :set fenc=utf-8
+
+" バックアップ無効
+:set backupskip=/tmp/*,/private/tmp/*
+:set backupcopy=yes
+:set nobackup
 
 endif
