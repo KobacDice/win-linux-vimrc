@@ -30,23 +30,12 @@ if has('vim_starting')
  NeoBundle 'seventhsense/nerdtree', 'development'
  NeoBundle 'vim-scripts/taglist.vim'
  NeoBundle 'szw/vim-tags'
-
-" カラースキーム
- NeoBundle 'altercation/vim-colors-solarized'
- NeoBundle 'croaker/mustang-vim'
- NeoBundle 'jeffreyiacono/vim-colors-wombat'
- NeoBundle 'nanotech/jellybeans.vim'
- NeoBundle 'vim-scripts/Lucius'
- NeoBundle 'vim-scripts/Zenburn'
- NeoBundle 'mrkn/mrkn256.vim'
- NeoBundle 'jpo/vim-railscasts-theme'
- NeoBundle 'therubymug/vim-pyte'
- NeoBundle 'tomasr/molokai'
- NeoBundle 'ujihisa/unite-colorscheme'
-
-" インストールのチェック
- NeoBundleCheck
+ NeoBundle 'simeji/winresizer', 'tags'
  NeoBundle 'Shougo/neocomplcache'
+ NeoBundle 'jpo/vim-railscasts-theme'
+
+" NeoBundle install check
+ NeoBundleCheck
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -57,14 +46,17 @@ let g:neocomplcache_manual_completion_start_length = 0
 let g:neocomplcache_caching_percent_in_statusline = 1
 let g:neocomplcache_enable_skip_completion = 1
 let g:neocomplcache_skip_input_time = '0.5'
- call neobundle#end()
+call neobundle#end()
+
+" Window Resize Key
+let g:winresizer_start_key = '<C-m>'
 
 " Nerdtree設定
 " NERDTreeファイルコピーのメニューを表示させる
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeWinSize=55
 " 隠しファイルをデフォルトで表示させる
-" let NERDTreeShowHidden = 1
+let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、

@@ -29,7 +29,7 @@ NeoBundle "tyru/caw.vim.git"
 NeoBundle 'violetyk/cake.vim'
 NeoBundle 'violetyk/vim-phpclass'
 NeoBundle 'kana/vim-gf-user'
-NeoBundle 'KobacDice/nerdtree', 'development'
+NeoBundle 'KobacDice/nerdtree-custom', 'development'
 NeoBundle 'jpo/vim-railscasts-theme'
 
 " インストールのチェック
