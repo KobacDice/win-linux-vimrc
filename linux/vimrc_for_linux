@@ -50,6 +50,8 @@ call neobundle#end()
 
 " Window Resize Key
 let g:winresizer_start_key = '<C-n>'
+" open filer
+noremap <silent><C-m> :MRU<CR>
 
 " Nerdtree設定
 " NERDTreeファイルコピーのメニューを表示させる
