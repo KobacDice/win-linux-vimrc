@@ -77,17 +77,14 @@ filetype plugin indent on
 nmap <C-j> <Plug>(caw:i:toggle)
 vmap <C-j> <Plug>(caw:i:toggle)
 
-nnoremap <silent><C-y> :vsplit<CR>
-nnoremap <silent><C-m> :MRU<CR>
-
-"nnoremap <silent><C-t> :tabe<CR>
-"nmap <Space>    gt
-
 "neosnippet定義
 let g:neosnippet#enable_snipmate_compatibility = 1
 let s:my_snippet = '~/.vim/snippets/'
 let g:neosnippet#snippets_directory = s:my_snippet
+
+" 辞書ファイル定義
 autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
+autocmd BufRead *.py :set dictionary=~/.vim/dictionaries/python.dict filetype=python
 
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
