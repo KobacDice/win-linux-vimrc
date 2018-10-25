@@ -139,6 +139,8 @@ endfunction
 :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 :set fileformats=unix,dos,mac
 :set fenc=utf-8
+:scriptencoding utf-8
+:set ambiwidth=double
 
 " バックアップ無効
 :set backupskip=/tmp/*,/private/tmp/*
