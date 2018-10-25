@@ -17,7 +17,6 @@ if has('vim_starting')
  NeoBundle 'itchyny/lightline.vim'
  NeoBundle 'Shougo/neosnippet'
  NeoBundle 'Shougo/neocomplete.vim'
- " NeoBundle 'scrooloose/nerdtree'
  NeoBundle 'Shougo/neomru.vim'
  NeoBundle 'ornicar/vim-mru'
  NeoBundle 'Shougo/neosnippet-snippets'
