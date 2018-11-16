@@ -135,9 +135,9 @@ endfunction
 " ファイルエンコード定義
 :colorscheme railscasts
 :set encoding=utf-8
+:set fenc=utf-8
 :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 :set fileformats=unix,dos,mac
-:set fenc=utf-8
 :scriptencoding utf-8
 :set ambiwidth=double
 
