@@ -72,7 +72,7 @@ smap <C-j> <Plug>(neosnippet_expand_or_jump)
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 
-:set encoding=utf-8
+":set encoding=utf-8
 :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 :set fileformats=unix,dos,mac
 
@@ -141,28 +141,28 @@ autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict
 "let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\avabel\\asobimo_platform\\plugins\\Front\\"
 "let g:cakephp_app = "C:\\Users\\d_kobayashi\\Documents\\html\\tool\\app\\"
 " バッファで開くキーバインド設定
-nnoremap <Space>cc :Ccontroller
-nnoremap <Space>cm :Cmodel
-nnoremap <Space>cv :Cview
-nnoremap <Space>cvw :Ccontrollerview
-nnoremap <Space>cs :Cshell
-nnoremap <Space>ct :Ctask
-nnoremap <Space>ccf :Cconfig
-nnoremap <Space>ccp :Ccomponent
-nnoremap <Space>cl :Clog
+"nnoremap <Space>cc :Ccontroller
+"nnoremap <Space>cm :Cmodel
+"nnoremap <Space>cv :Cview
+"nnoremap <Space>cvw :Ccontrollerview
+"nnoremap <Space>cs :Cshell
+"nnoremap <Space>ct :Ctask
+"nnoremap <Space>ccf :Cconfig
+"nnoremap <Space>ccp :Ccomponent
+"nnoremap <Space>cl :Clog
 " splitで開くキーバインド設定
-nnoremap <Space>ccs :Ccontrollersp
-nnoremap <Space>cms :Cmodelsp
-nnoremap <Space>cvs :Cviewsp
-nnoremap <Space>cvws :Ccontrollerviewsp
-nnoremap <Space>ccfs :Cconfigsp
-nnoremap <Space>ccps :Ccomponentsp
+"nnoremap <Space>ccs :Ccontrollersp
+"nnoremap <Space>cms :Cmodelsp
+"nnoremap <Space>cvs :Cviewsp
+"nnoremap <Space>cvws :Ccontrollerviewsp
+"nnoremap <Space>ccfs :Cconfigsp
+"nnoremap <Space>ccps :Ccomponentsp
 " vsplitで開くキーバインド設定
-nnoremap <Space>ccv :Ccontrollervsp
-nnoremap <Space>cmv :Cmodelvsp
-nnoremap <Space>cvv :Cviewvsp
-nnoremap <Space>cvwv :Ccontrollerviewvsp
-nnoremap <Space>ccfv :Cconfigvsp
-nnoremap <Space>ccpv :Ccomponentvsp
+"nnoremap <Space>ccv :Ccontrollervsp
+"nnoremap <Space>cmv :Cmodelvsp
+"nnoremap <Space>cvv :Cviewvsp
+"nnoremap <Space>cvwv :Ccontrollerviewvsp
+"nnoremap <Space>ccfv :Cconfigvsp
+"nnoremap <Space>ccpv :Ccomponentvsp
 " tabで開くキーバインド設定
-nnoremap <Space>cct :Ccontrollertab
+"nnoremap <Space>cct :Ccontrollertab
