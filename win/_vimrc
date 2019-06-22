@@ -73,8 +73,8 @@ smap <C-j> <Plug>(neosnippet_expand_or_jump)
 nnoremap <C-]> g<C-]>
 
 ":set encoding=utf-8
-:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-:set fileformats=unix,dos,mac
+":set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+":set fileformats=unix,dos,mac
 
 "ファイルコピーのメニューを表示させる
 let g:NERDTreeCopyCmd= 'cp -r '
