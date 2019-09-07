@@ -146,4 +146,7 @@ endfunction
 :set backupcopy=yes
 :set nobackup
 
+set mouse=a
+set ttymouse=xterm2
+
 endif
