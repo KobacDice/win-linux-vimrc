@@ -32,9 +32,45 @@ if has('vim_starting')
  NeoBundle 'simeji/winresizer', 'tags'
  NeoBundle 'Shougo/neocomplcache'
  NeoBundle 'jpo/vim-railscasts-theme'
+ NeoBundle 'jistr/vim-nerdtree-tabs'
+
+ NeoBundleLazy 'vim-jp/cpp-vim', {
+            \ 'autoload' : {'filetypes' : 'cpp'}
+            \ }
+
+ NeoBundleLazy 'Valloric/YouCompleteMe', {
+      \ 'build' : {
+      \   'mac' : './install.sh --clang-completer',
+      \   'unix' : './install.sh --clang-completer',
+      \ }
+      \ }
+
+ NeoBundleLazy 'osyo-manga/vim-stargate', {
+            \ 'autoload' : {'filetypes' : 'cpp'}
+            \ }
 
 " NeoBundle install check
  NeoBundleCheck
+
+
+
+function! CPPCodeCleanup()
+  " echo "Cleanup cpp code"
+  let l:lines="all"
+  let g:clang_format_fallback_style = 'Google'
+  :pyf /usr/local/share/clang/clang-format.py
+endfunction
+command! CPPCodeCleanup call CPPCodeCleanup()
+
+autocmd BufWrite *.{cpp} :CPPCodeCleanup
+autocmd BufWrite *.{hpp} :CPPCodeCleanup
+autocmd BufWrite *.{c} :CPPCodeCleanup
+autocmd BufWrite *.{h} :CPPCodeCleanup
+
+augroup cpp-path
+    autocmd!
+    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include,/usr/lib/c++/v1
+augroup END
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -58,7 +94,7 @@ let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeWinSize=55
 " 隠しファイルをデフォルトで表示させる
 let NERDTreeShowHidden = 1
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、
 " ファイルタイプ別プラグイン/インデントを有効化する
