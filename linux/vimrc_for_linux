@@ -14,23 +14,24 @@ if has('vim_starting')
 
 " 読み込むプラグインを記載
  NeoBundle 'Shougo/unite.vim'
- NeoBundle 'itchyny/lightline.vim'
  NeoBundle 'Shougo/neosnippet'
  NeoBundle 'Shougo/neocomplete.vim'
  NeoBundle 'Shougo/neomru.vim'
- NeoBundle 'ornicar/vim-mru'
  NeoBundle 'Shougo/neosnippet-snippets'
- NeoBundle 'thinca/vim-quickrun'
  NeoBundle 'Shougo/vimfiler'
+ NeoBundle 'Shougo/neocomplcache'
+ NeoBundle 'itchyny/lightline.vim'
+ NeoBundle 'ornicar/vim-mru'
+ NeoBundle 'thinca/vim-quickrun'
  NeoBundle 'violetyk/cake.vim'
- NeoBundle 'tyru/caw.vim.git'
  NeoBundle 'violetyk/vim-phpclass'
+ NeoBundle 'violetyk/neocomplete-php.vim'
+ NeoBundle 'tyru/caw.vim.git'
  NeoBundle 'kana/vim-gf-user'
  NeoBundle 'seventhsense/nerdtree', 'development'
  NeoBundle 'vim-scripts/taglist.vim'
  NeoBundle 'szw/vim-tags'
  NeoBundle 'simeji/winresizer', 'tags'
- NeoBundle 'Shougo/neocomplcache'
  NeoBundle 'jpo/vim-railscasts-theme'
  NeoBundle 'jistr/vim-nerdtree-tabs'
 
@@ -49,28 +50,7 @@ if has('vim_starting')
             \ 'autoload' : {'filetypes' : 'cpp'}
             \ }
 
-" NeoBundle install check
  NeoBundleCheck
-
-
-
-function! CPPCodeCleanup()
-  " echo "Cleanup cpp code"
-  let l:lines="all"
-  let g:clang_format_fallback_style = 'Google'
-  :pyf /usr/local/share/clang/clang-format.py
-endfunction
-command! CPPCodeCleanup call CPPCodeCleanup()
-
-autocmd BufWrite *.{cpp} :CPPCodeCleanup
-autocmd BufWrite *.{hpp} :CPPCodeCleanup
-autocmd BufWrite *.{c} :CPPCodeCleanup
-autocmd BufWrite *.{h} :CPPCodeCleanup
-
-augroup cpp-path
-    autocmd!
-    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include,/usr/lib/c++/v1
-augroup END
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -96,9 +76,28 @@ let NERDTreeWinSize=55
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 
+function! CPPCodeCleanup()
+  " echo "Cleanup cpp code"
+  let l:lines="all"
+  let g:clang_format_fallback_style = 'Google'
+  :pyf /usr/local/share/clang/clang-format.py
+endfunction
+command! CPPCodeCleanup call CPPCodeCleanup()
+
+autocmd BufWrite *.{cpp} :CPPCodeCleanup
+autocmd BufWrite *.{hpp} :CPPCodeCleanup
+autocmd BufWrite *.{c} :CPPCodeCleanup
+autocmd BufWrite *.{h} :CPPCodeCleanup
+
+augroup cpp-path
+    autocmd!
+    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include,/usr/lib/c++/v1
+augroup END
+
 " 読み込んだプラグインも含め、ファイルタイプの検出、
 " ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
+filetype plugin on
 
 "各種セットアップ
 :set noswapfile
@@ -122,6 +121,13 @@ let g:neosnippet#snippets_directory = s:my_snippet
 " 辞書ファイル定義
 autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
 autocmd BufRead *.py :set dictionary=~/.vim/dictionaries/python.dict filetype=python
+autocmd BufRead *.rb :set dictionary=~/.vim/dictionaries/ruby.dict filetype=ruby
+autocmd BufRead *.pl :set dictionary=~/.vim/dictionaries/perl.dict filetype=perl
+
+autocmd FileType python let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
