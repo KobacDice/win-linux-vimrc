@@ -1,18 +1,14 @@
 " don't read .vimrc when exec vi view ex
 if 1
 
-" vim起動時のみruntimepathにneobundle.vimを追加
 if has('vim_starting')
     set nocompatible
     set runtimepath+=~/.vim/bundle/neobundle.vim
  endif
 
-" neobundle.vimの初期化
  call neobundle#begin(expand('~/.vim/bundle/'))
-" NeoBundleを更新するための設定
  NeoBundleFetch 'Shougo/neobundle.vim'
 
-" 読み込むプラグインを記載
  NeoBundle 'Shougo/unite.vim'
  NeoBundle 'Shougo/neosnippet'
  NeoBundle 'Shougo/neocomplete.vim'
@@ -20,6 +16,7 @@ if has('vim_starting')
  NeoBundle 'Shougo/neosnippet-snippets'
  NeoBundle 'Shougo/vimfiler'
  NeoBundle 'Shougo/neocomplcache'
+ NeoBundle 'Shougo/vinarise.vim'
  NeoBundle 'itchyny/lightline.vim'
  NeoBundle 'ornicar/vim-mru'
  NeoBundle 'thinca/vim-quickrun'
@@ -34,23 +31,39 @@ if has('vim_starting')
  NeoBundle 'simeji/winresizer', 'tags'
  NeoBundle 'jpo/vim-railscasts-theme'
  NeoBundle 'jistr/vim-nerdtree-tabs'
+ NeoBundle 'rhysd/wandbox-vim'
+ NeoBundle 'Shougo/unite-outline'
+ NeoBundle 'justmao945/vim-clang'
+ NeoBundle 'rhysd/vim-clang-format'
+ NeoBundle  'davidhalter/jedi-vim'
 
- NeoBundleLazy 'vim-jp/cpp-vim', {
+NeoBundleLazy 'kana/vim-altr'
+
+NeoBundleLazy 'rhysd/unite-n3337', {
+            \ 'depends' : 'Shougo/unite.vim',
             \ 'autoload' : {'filetypes' : 'cpp'}
             \ }
 
- NeoBundleLazy 'Valloric/YouCompleteMe', {
-      \ 'build' : {
-      \   'mac' : './install.sh --clang-completer',
-      \   'unix' : './install.sh --clang-completer',
-      \ }
-      \ }
-
- NeoBundleLazy 'osyo-manga/vim-stargate', {
+NeoBundleLazy 'vim-jp/cpp-vim', {
             \ 'autoload' : {'filetypes' : 'cpp'}
             \ }
 
- NeoBundleCheck
+NeoBundleLazy 'Valloric/YouCompleteMe', {
+            \ 'build' : {
+            \   'mac' : './install.sh --clang-completer',
+            \   'unix' : './install.sh --clang-completer',
+            \ }
+            \ }
+
+NeoBundleLazy 'osyo-manga/vim-stargate', {
+            \ 'autoload' : {'filetypes' : 'cpp'}
+            \ }
+
+NeoBundleLazy 'rhysd/vim-clang-format', {
+             \ 'autoload' : {'filetypes' : ['c', 'cpp', 'objc']}
+             \ }
+
+NeoBundleCheck
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -61,45 +74,70 @@ let g:neocomplcache_manual_completion_start_length = 0
 let g:neocomplcache_caching_percent_in_statusline = 1
 let g:neocomplcache_enable_skip_completion = 1
 let g:neocomplcache_skip_input_time = '0.5'
+
+let g:winresizer_start_key = '<C-n>'
+let g:NERDTreeCopyCmd= 'cp -r '
+
+if !exists('g:neocomplcache_force_omni_patterns')
+    let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_overwrite_completefunc = 1
+let g:neocomplcache_force_omni_patterns.c =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.objc =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.objcpp =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_use_library = 1
+
+let g:clang_format#style_options = {
+            \ 'AccessModifierOffset' : -4,
+            \ 'AllowShortIfStatementsOnASingleLine' : 'true',
+            \ 'AlwaysBreakTemplateDeclarations' : 'true',
+            \ 'Standard' : 'C++11',
+            \ 'BreakBeforeBraces' : 'Stroustrup',
+            \ }
+
+let g:clang_jumpto_declaration_key = '<C-t>'
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+let g:quickrun_config._ = {
+            \ 'outputter' : 'quickfix',
+            \ 'runner' : 'vimproc'
+            \ }
+
+let g:quickrun_config.cpp = {
+            \ 'command' : 'clang++',
+            \ 'cmdopt' : '-std=c++1y -Wall -Wextra',
+            \ }
+
+let g:quickrun_config['cpp/gcc'] = {
+            \ 'command' : 'g++',
+            \ 'cmdopt' : '-std=c++11 -Wall -Wextra',
+            \ }
+
+let g:quickrun_config.cpp = {
+            \ 'command' : 'clang++',
+            \ 'cmdopt' : '-std=c++1y -Wall -Wextra',
+            \ 'hook/quickrunex/enable' : 1,
+            \ }
+
 call neobundle#end()
 
-" Window Resize Key
-let g:winresizer_start_key = '<C-n>'
-" open filer
 noremap <silent><C-m> :MRU<CR>
 
-" Nerdtree設定
-" NERDTreeファイルコピーのメニューを表示させる
-let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeWinSize=55
-" 隠しファイルをデフォルトで表示させる
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 
-function! CPPCodeCleanup()
-  " echo "Cleanup cpp code"
-  let l:lines="all"
-  let g:clang_format_fallback_style = 'Google'
-  :pyf /usr/local/share/clang/clang-format.py
-endfunction
-command! CPPCodeCleanup call CPPCodeCleanup()
-
-autocmd BufWrite *.{cpp} :CPPCodeCleanup
-autocmd BufWrite *.{hpp} :CPPCodeCleanup
-autocmd BufWrite *.{c} :CPPCodeCleanup
-autocmd BufWrite *.{h} :CPPCodeCleanup
-
-augroup cpp-path
-    autocmd!
-    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include,/usr/lib/c++/v1
-augroup END
-
-" 読み込んだプラグインも含め、ファイルタイプの検出、
-" ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
 filetype plugin on
 
-"各種セットアップ
 :set noswapfile
 :set noundofile
 :set clipboard=unnamed,autoselect
@@ -109,16 +147,13 @@ filetype plugin on
 :set noautoindent
 :set nosmartindent
 
-" ショートカットキー
 nmap <C-j> <Plug>(caw:i:toggle)
 vmap <C-j> <Plug>(caw:i:toggle)
 
-"neosnippet定義
-let g:neosnippet#enable_snipmate_compatibility = 1
 let s:my_snippet = '~/.vim/snippets/'
+let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory = s:my_snippet
 
-" 辞書ファイル定義
 autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
 autocmd BufRead *.py :set dictionary=~/.vim/dictionaries/python.dict filetype=python
 autocmd BufRead *.rb :set dictionary=~/.vim/dictionaries/ruby.dict filetype=ruby
@@ -168,11 +203,37 @@ function PHPLint()
 	if len(Match_Result) == 0 | echo Lint_Result | endif
 endfunction
 
-" CakePHP設定
-" let g:cakephp_enable_fix_mode = 1
-" let g:cakephp_enable_auto_mode = 1
-" let g:cakephp_app = "/var/www/html/xworld/app_front/"
-" let g:cakephp_app = "/var/www/html/avabel/app_admin/"
+augroup cpp-namespace
+    autocmd!
+    autocmd FileType cpp inoremap <buffer><expr>; <SID>expand_namespace()
+augroup END
+
+augroup cpp-path
+    autocmd!
+    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include,/usr/lib/c++/v1
+augroup END
+
+nnoremap <Leader>a <Plug>(altr-forward)
+set cinoptions+=:0,g0
+
+function! CPPCodeCleanup()
+  " echo "Cleanup cpp code"
+  let l:lines="all"
+  let g:clang_format_fallback_style = 'Google'
+  :py3f /usr/local/share/clang/clang-format.py
+endfunction
+
+command! CPPCodeCleanup call CPPCodeCleanup()
+
+autocmd BufWrite *.{cpp} :CPPCodeCleanup
+autocmd BufWrite *.{hpp} :CPPCodeCleanup
+autocmd BufWrite *.{c} :CPPCodeCleanup
+autocmd BufWrite *.{h} :CPPCodeCleanup
+
+augroup cpp-clangformat
+    autocmd!
+    autocmd FileType c,cpp,objc noremap <C-K> :py3f /usr/local/share/clang/clang-format.py<CR>
+augroup END
 
 " ファイルエンコード定義
 :colorscheme railscasts
@@ -190,5 +251,11 @@ endfunction
 
 set mouse=a
 set ttymouse=xterm2
+
+" CakePHP設定
+" let g:cakephp_enable_fix_mode = 1
+" let g:cakephp_enable_auto_mode = 1
+" let g:cakephp_app = "/var/www/html/xworld/app_front/"
+" let g:cakephp_app = "/var/www/html/avabel/app_admin/"
 
 endif
