@@ -1,5 +1,7 @@
 "コマンドサンプル
 "mkdir %userprofile%\.vim\bundle
+"mkdir %userprofile%\.vim\dictionaries
+"mkdir %userprofile%\.vim\snippets
 "cd %userprofile%\.vim\bundle
 "git clone git://github.com/Shougo/neobundle.vim
 
