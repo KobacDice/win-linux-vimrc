@@ -11,9 +11,9 @@ if has('vim_starting')
 
  NeoBundle 'Shougo/unite.vim'
  NeoBundle 'Shougo/neosnippet'
+ NeoBundle 'Shougo/neosnippet-snippets'
  NeoBundle 'Shougo/neocomplete.vim'
  NeoBundle 'Shougo/neomru.vim'
- NeoBundle 'Shougo/neosnippet-snippets'
  NeoBundle 'Shougo/vimfiler'
  NeoBundle 'Shougo/neocomplcache'
  NeoBundle 'Shougo/vinarise.vim'
@@ -150,7 +150,25 @@ filetype plugin on
 nmap <C-j> <Plug>(caw:i:toggle)
 vmap <C-j> <Plug>(caw:i:toggle)
 
-let s:my_snippet = '~/.vim/snippets/'
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+let s:my_snippet = ' ~/.vim/bundle/neosnippet-snippets/neosnippets,~/.vim/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory = s:my_snippet
 
