@@ -25,7 +25,8 @@ if has('vim_starting')
  NeoBundle 'violetyk/neocomplete-php.vim'
  NeoBundle 'tyru/caw.vim.git'
  NeoBundle 'kana/vim-gf-user'
- NeoBundle 'seventhsense/nerdtree', 'development'
+"NeoBundle 'seventhsense/nerdtree', 'development'
+ NeoBundle 'KobacDice/nerdtree-grep-custom', 'development'
  NeoBundle 'vim-scripts/taglist.vim'
  NeoBundle 'szw/vim-tags'
  NeoBundle 'simeji/winresizer', 'tags'
@@ -276,5 +277,12 @@ set ttymouse=xterm2
 " let g:cakephp_enable_auto_mode = 1
 " let g:cakephp_app = "/var/www/html/xworld/app_front/"
 " let g:cakephp_app = "/var/www/html/avabel/app_admin/"
+
+" ブックマークを最初から表示
+let g:NERDTreeShowBookmarks=1
+" ファイル指定で開かれた場合はNERDTreeは表示しない
+if !argc()
+    autocmd vimenter * NERDTree|normal gg3j
+endif
 
 endif
