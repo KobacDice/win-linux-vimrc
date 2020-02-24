@@ -4,6 +4,7 @@
 
 sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+sudo yum -y install ctags
 
 ln -nfs $HOME/win-linux-vimrc/.vim $HOME/.vim
 ln -nfs $HOME/win-linux-vimrc/linux/vimrc_for_linux $HOME/.vimrc
