@@ -20,7 +20,7 @@ if has('vim_starting')
  NeoBundle 'itchyny/lightline.vim'
  NeoBundle 'ornicar/vim-mru'
  NeoBundle 'thinca/vim-quickrun'
- NeoBundle 'violetyk/cake.vim'
+" NeoBundle 'violetyk/cake.vim'
  NeoBundle 'violetyk/vim-phpclass'
  NeoBundle 'violetyk/neocomplete-php.vim'
  NeoBundle 'tyru/caw.vim.git'
@@ -184,13 +184,13 @@ autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-" tags$B%8%c%s%W$N;~$KJ#?t$"$k;~$O0lMwI=<((B
+" tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 
-"$B%?%0$N@_Dj!#(B
+"タグの設定。
 :set tags+=~/.ctags
 
-"$B%?%V!"6uGr!"2~9T$N2D;k2=(B
+"タブ、空白、改行の可視化
 syntax on
 set list
 set listchars=tab:>.,trail:_,eol:?,extends:>,precedes:<,nbsp:%
@@ -201,25 +201,25 @@ if has('syntax')
     augroup ZenkakuSpace
         autocmd!
         autocmd ColorScheme       * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter * match ZenkakuSpace /$B!!(B/
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
     augroup END
     call ZenkakuSpace()
 endif
 
 augroup PHP
 	autocmd!
-	" $BJ8Kv$NH>3Q%9%Z!<%9$r:o=|(B
+	" 文末の半角スペースを削除
 	autocmd BufWritePre *.php\|*.ctp\|*.tpl %s/\s\+$//e
-	" PHPLint$B=hM}(B
+	" PHPLint処理
 	autocmd BufWritePost *.php\|*.ctp\|*.tpl call PHPLint()
 augroup END
-" PHPLint$B=hM}(B
+" PHPLint処理
 function PHPLint()
-	" php -l$B$N<B9T7k2L$rJQ?t$KBeF~(B
+	" php -lの実行結果を変数に代入
 	let Lint_Result = system( &ft . ' -l ' . bufname(""))
-	" No syntax errors$B$NJ8;zNs$,(Bmatch$B$9$k$+%A%'%C%/(B
+	" No syntax errorsの文字列がmatchするかチェック
 	let Match_Result = matchstr(Lint_Result, 'No syntax errors')
-	" $B%(%i!<$,$"$k$H$-$@$1(BLint$B$N7k2L$r=PNO$9$k(B
+	" エラーがあるときだけLintの結果を出力する
 	if len(Match_Result) == 0 | echo Lint_Result | endif
 endfunction
 
@@ -255,7 +255,7 @@ augroup cpp-clangformat
     autocmd FileType c,cpp,objc noremap <C-K> :py3f /usr/local/share/clang/clang-format.py<CR>
 augroup END
 
-" $B%U%!%$%k%(%s%3!<%IDj5A(B
+" ファイルエンコード定義
 :colorscheme railscasts
 :set encoding=utf-8
 :set fenc=utf-8
@@ -264,7 +264,7 @@ augroup END
 :scriptencoding utf-8
 :set ambiwidth=double
 
-" $B%P%C%/%"%C%WL58z(B
+" バックアップ無効
 :set backupskip=/tmp/*,/private/tmp/*
 :set backupcopy=yes
 :set nobackup
@@ -272,17 +272,17 @@ augroup END
 set mouse=a
 set ttymouse=xterm2
 
-" CakePHP$B@_Dj(B
+" CakePHP設定
 " let g:cakephp_enable_fix_mode = 1
 " let g:cakephp_enable_auto_mode = 1
 " let g:cakephp_app = "/var/www/html/xworld/app_front/"
 " let g:cakephp_app = "/var/www/html/avabel/app_admin/"
 
-" $B%V%C%/%^!<%/$r:G=i$+$iI=<((B
+" ブックマークを最初から表示
 let g:NERDTreeShowBookmarks=1
-" $B%U%!%$%k;XDj$G3+$+$l$?>l9g$O(BNERDTree$B$OI=<($7$J$$(B
-if !argc()
-    autocmd vimenter * NERDTree|normal gg3j
-endif
+" ファイル指定で開かれた場合はNERDTreeは表示しない
+"if !argc()
+"    autocmd vimenter * NERDTree|normal gg3j
+"endif
 
 endif
