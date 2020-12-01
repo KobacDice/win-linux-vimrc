@@ -38,6 +38,7 @@ if has('vim_starting')
  NeoBundle 'rhysd/vim-clang-format'
  NeoBundle 'davidhalter/jedi-vim'
  NeoBundle 'rkulla/pydiction'
+ NeoBundle 'cohama/agit.vim'
 
 NeoBundleLazy 'kana/vim-altr'
 
