@@ -31,7 +31,7 @@ if has('vim_starting')
  NeoBundle 'szw/vim-tags'
  NeoBundle 'simeji/winresizer', 'tags'
  NeoBundle 'jpo/vim-railscasts-theme'
-"NeoBundle 'jistr/vim-nerdtree-tabs'
+ NeoBundle 'jistr/vim-nerdtree-tabs'
  NeoBundle 'rhysd/wandbox-vim'
  NeoBundle 'Shougo/unite-outline'
  NeoBundle 'justmao945/vim-clang'
