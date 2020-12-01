@@ -288,4 +288,6 @@ let g:NERDTreeShowBookmarks=1
 "    autocmd vimenter * NERDTree|normal gg3j
 "endif
 
+hi! VertSplit ctermfg=120 ctermbg=55 term=NONE
+
 endif
