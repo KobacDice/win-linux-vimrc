@@ -260,10 +260,11 @@ augroup END
 
 " ファイルエンコード定義
 :colorscheme railscasts
-:set encoding=utf-8
-:set fenc=utf-8
-:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-:set fileformats=unix,dos,mac
+" :set encoding=utf-8
+set encoding=utf-8
+" :set fenc=utf-8
+" :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" :set fileformats=unix,dos,mac
 :scriptencoding utf-8
 :set ambiwidth=double
 
@@ -289,5 +290,16 @@ let g:NERDTreeShowBookmarks=1
 "endif
 
 hi! VertSplit ctermfg=120 ctermbg=55 term=NONE
+
+let agit_action = {}
+function! agit_action.func(dir)
+  if isdirectory(a:dir.word)
+    let dir = fnamemodify(a:dir.word, ':p')
+  else
+    let dir = fnamemodify(a:dir.word, ':p:h')
+  endif
+  execute 'Agit --dir=' . dir
+endfunction
+call unite#custom#action('file,cdable', 'agit', agit_action)
 
 endif
