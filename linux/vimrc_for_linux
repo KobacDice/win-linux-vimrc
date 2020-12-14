@@ -39,6 +39,7 @@ if has('vim_starting')
  NeoBundle 'davidhalter/jedi-vim'
  NeoBundle 'rkulla/pydiction'
  NeoBundle 'cohama/agit.vim'
+ NeoBundle 'phpactor/phpactor'
 
 NeoBundleLazy 'kana/vim-altr'
 
@@ -138,7 +139,6 @@ let NERDTreeWinSize=55
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
-
 
 filetype plugin indent on
 filetype plugin on
@@ -276,12 +276,6 @@ set encoding=utf-8
 set mouse=a
 set ttymouse=xterm2
 
-" CakePHP設定
-" let g:cakephp_enable_fix_mode = 1
-" let g:cakephp_enable_auto_mode = 1
-" let g:cakephp_app = "/var/www/html/xworld/app_front/"
-" let g:cakephp_app = "/var/www/html/avabel/app_admin/"
-
 " ブックマークを最初から表示
 let g:NERDTreeShowBookmarks=1
 " ファイル指定で開かれた場合はNERDTreeは表示しない
@@ -302,4 +296,49 @@ function! agit_action.func(dir)
 endfunction
 call unite#custom#action('file,cdable', 'agit', agit_action)
 
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+
 endif
+
+" CakePHP設定
+" let g:cakephp_enable_fix_mode = 1
+" let g:cakephp_enable_auto_mode = 1
+" let g:cakephp_app = "/var/www/html/xworld/app_front/"
+" let g:cakephp_app = "/var/www/html/avabel/app_admin/"
+
+" Laraval設定
+" 画面を分割して定義元へのジャンプ
+function! DefinitionJumpWithPhpactor()
+    split
+    call phpactor#GotoDefinition()
+endfunction
+
+" useの補完
+nmap <silent><Leader>u      :<C-u>call phpactor#UseAdd()<CR>
+" コンテキストメニューの起動(カーソル下のクラスやメンバに対して実行可能な選択肢を表示してくれます)
+nmap <silent><Leader>mm     :<C-u>call phpactor#ContextMenu()<CR>
+" ナビゲーションメニューの起動(クラスの参照元を列挙したり、他ファイルへのジャンプなど)
+nmap <silent><Leader>nn     :<C-u>call phpactor#Navigate()<CR>
+" カーソル下のクラスやメンバの定義元にジャンプ
+nmap <silent><Leader>o      :<C-u>call phpactor#GotoDefinition()<CR>
+" 編集中のクラスに対し各種の変更を加える(コンストラクタ補完、インタフェース実装など)
+nmap <silent><Leader>tt     :<C-u>call phpactor#Transform()<CR>
+" 新しいクラスを生成する(編集中のファイルに)
+nmap <silent><Leader>cc     :<C-u>call phpactor#ClassNew()<CR>
+" 選択した範囲を変数に抽出する
+nmap <silent><Leader>ee     :<C-u>call phpactor#ExtractExpression(v:false)<CR>
+" 選択した範囲を変数に抽出する
+vmap <silent><Leader>ee     :<C-u>call phpactor#ExtractExpression(v:true)<CR>
+" 選択した範囲を新たなメソッドとして抽出する
+vmap <silent><Leader>em     :<C-u>call phpactor#ExtractMethod()<CR>
+" split → jump
+nmap <silent><C-w><Leader>o :<C-u>call DefinitionJumpWithPhpactor()<CR>
+" カーソル下のクラスや変数の情報を表示する
+" 他のエディタで、マウスカーソルをおいたときに表示されるポップアップなどに相当
+vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
+
+" <C-x><C-o>で補完候補を表示できます。
+autocmd FileType php setlocal omnifunc=phpactor#Complete
