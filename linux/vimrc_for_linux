@@ -40,6 +40,20 @@ if has('vim_starting')
  NeoBundle 'rkulla/pydiction'
  NeoBundle 'cohama/agit.vim'
  NeoBundle 'phpactor/phpactor'
+ NeoBundle 'noahfrederick/vim-laravel'
+ NeoBundle 'tpope/vim-rails'
+ NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+ NeoBundle 'airblade/vim-gitgutter'
+ NeoBundle 'tpope/vim-fugitive'
+ NeoBundle 'dhruvasagar/vim-table-mode'
+ NeoBundle 'kana/vim-operator-replace'
+ NeoBundle 'instant-markdown/vim-instant-markdown'
+ NeoBundle 'preservim/tagbar'
+ NeoBundle 'Shougo/deoplete.nvim'
+ NeoBundle 'jiangmiao/auto-pairs'
+
+
+ 
 
 NeoBundleLazy 'kana/vim-altr'
 
@@ -68,6 +82,18 @@ NeoBundleLazy 'rhysd/vim-clang-format', {
              \ }
 
 NeoBundleCheck
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -151,6 +177,13 @@ filetype plugin on
 :set guioptions+=b
 :set noautoindent
 :set nosmartindent
+:set hlsearch
+:set ignorecase
+:set showcmd
+:set background=dark
+:set wildmenu
+
+
 
 nmap <C-j> <Plug>(caw:i:toggle)
 vmap <C-j> <Plug>(caw:i:toggle)

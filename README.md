@@ -2,9 +2,11 @@
 #run this commad
 #cat win-linux-vimrc/README.md |sh
 
-sudo yum install -y https://repo.ius.io/ius-release-el7.rpm
-sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
-sudo yum -y install ctags
+#sudo yum install -y https://repo.ius.io/ius-release-el7.rpm
+#sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+#sudo yum -y install ctags
+
+brew bundle
 
 ln -nfs $HOME/win-linux-vimrc/.vim $HOME/.vim
 ln -nfs $HOME/win-linux-vimrc/linux/vimrc_for_linux $HOME/.vimrc
