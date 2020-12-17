@@ -159,6 +159,8 @@ let g:quickrun_config.cpp = {
 
 call neobundle#end()
 
+let g:loaded_operator_replace = 1
+
 noremap <silent><C-m> :MRU<CR>
 
 let NERDTreeWinSize=55
@@ -184,6 +186,8 @@ filetype plugin on
 :set wildmenu
 
 
+
+nmap s <Plug>(operator-replace)
 
 nmap <C-j> <Plug>(caw:i:toggle)
 vmap <C-j> <Plug>(caw:i:toggle)
