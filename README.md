@@ -7,6 +7,9 @@
 #sudo yum -y install ctags
 
 brew bundle
+brew search ctags
+brew uninstall ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 ln -nfs $HOME/win-linux-vimrc/.vim $HOME/.vim
 ln -nfs $HOME/win-linux-vimrc/linux/vimrc_for_linux $HOME/.vimrc

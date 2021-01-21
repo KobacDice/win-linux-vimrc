@@ -223,6 +223,8 @@ nnoremap <C-]> g<C-]>
 
 "タグの設定。
 :set tags+=~/.ctags
+let g:auto_ctags = 1
+
 
 "タブ、空白、改行の可視化
 syntax on
@@ -296,7 +298,7 @@ set encoding=utf-8
 " :set fenc=utf-8
 " :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 " :set fileformats=unix,dos,mac
-:scriptencoding utf-8
+" :scriptencoding utf-8
 :set ambiwidth=double
 
 " バックアップ無効
