@@ -29,7 +29,7 @@ if has('vim_starting')
  NeoBundle 'KobacDice/nerdtree-grep-custom', 'development'
  NeoBundle 'vim-scripts/taglist.vim'
  NeoBundle 'szw/vim-tags'
- NeoBundle 'soramugi/auto-ctags.vim'
+"NeoBundle 'soramugi/auto-ctags.vim'
  NeoBundle 'simeji/winresizer', 'tags'
  NeoBundle 'jpo/vim-railscasts-theme'
  NeoBundle 'jistr/vim-nerdtree-tabs'
@@ -53,7 +53,6 @@ if has('vim_starting')
  NeoBundle 'jiangmiao/auto-pairs'
 
 
- 
 
 NeoBundleLazy 'kana/vim-altr'
 
@@ -224,12 +223,12 @@ nnoremap <C-]> g<C-]>
 
 "タグの設定。
 :set tags+=~/.ctags
-let g:auto_ctags_tags_name = '.ctags'
-let g:auto_ctags_filetype_mode = 1
-let g:auto_ctags_set_tags_option = 1
-let g:auto_ctags = 1
-" let g:auto_ctags_directory_list = ['.git', '.svn']
-let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+" let g:auto_ctags_tags_name = '.ctags'
+" let g:auto_ctags_filetype_mode = 1
+" let g:auto_ctags_set_tags_option = 1
+" let g:auto_ctags = 1
+" let g:auto_ctags_directory_list = ['.ctags.d', '.git', '.svn']
+" let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
 
 "タブ、空白、改行の可視化
 syntax on
