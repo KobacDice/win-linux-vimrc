@@ -4,7 +4,7 @@ tap "homebrew/cask"
 cask 'docker'
 cask 'visual-studio-code'
 
-brew "git""
+brew "git"
 brew "kustomize"
 brew "k9s"
 brew "skaffold"
